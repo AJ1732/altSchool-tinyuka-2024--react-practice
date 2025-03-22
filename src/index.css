@@ -1,9 +1,13 @@
 @import "tailwindcss";
+@import "./css/fonts.css";
 
 @custom-variant dark (&:is(.dark, .dark *));
 
 @theme inline {
-  --font-display: "Satoshi", "sans-serif";
+  --font-satoshi: "Satoshi", "sans-serif";
+  --font-thunder: "Thunder VF", "sans-serif";
+  --font-outfit: "Outfit", "sans-serif";
+  --font-onek-hokot: "Onek Hokot", "sans-serif";
 
   --breakpoint-3xl: 120rem;
 
@@ -40,6 +44,7 @@
   --foreground: oklch(0.985 0 0);
 }
 
+/* CONTENT GRID */
 .content-grid {
   --padding-inline: 1.5rem;
   --content-max-width: 1220px;
@@ -72,4 +77,13 @@
 }
 .content-grid > .full-width {
   grid-column: full-width;
+}
+
+/* NO SCROLLBAR */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
 }
